@@ -1,4 +1,4 @@
-WordBrain solver.
+A WordBrain solver.
 
 Usage: 
 
