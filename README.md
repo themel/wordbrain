@@ -14,7 +14,7 @@ bazel test wordbrain:all
 ```
 bazel-bin/wordbrain/wordbrain --input=RNSOETRTBMIVTWIA \
 	--lengths="6 2 3 5" \
-	--dictionary=/usr/share/dict/words \ 
+	--dictionary=/usr/share/dict/words \
 	--blacklist="av mb va rn"
 ```
 
