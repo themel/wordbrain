@@ -5,7 +5,7 @@
 Requires [bazel](http://bazel.io).
 
 ```
-bazel build wordbrain
+bazel build -c opt wordbrain
 bazel test wordbrain:all
 ```
 
@@ -14,7 +14,7 @@ bazel test wordbrain:all
 ```
 bazel-bin/wordbrain/wordbrain --input=RNSOETRTBMIVTWIA \
 	--lengths="6 2 3 5" \
-	--dict=/usr/share/dict/words \ 
+	--dictionary=/usr/share/dict/words \ 
 	--blacklist="av mb va rn"
 ```
 
