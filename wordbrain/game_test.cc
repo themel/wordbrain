@@ -9,10 +9,7 @@
 TEST(Game, Functional) {
     std::stringstream str("cat\nhat\ncan\ncanoe\n");
     Trie dict = ReadDict(str, {});
-    Game foo("CATCANHAT", {3,3,3}, &dict);
-    GameState final = foo.Solve();
-    std::cerr << final;
-    EXPECT_EQ(3, final.found.size());
-    EXPECT_TRUE(final.wanted.empty());
+    std::vector<std::string> expected = {"CAT", "CAN", "HAT"};
+    EXPECT_EQ(expected, Solve("CATCANHAT", {3,3,3}, &dict));
 }
 
