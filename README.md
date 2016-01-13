@@ -1,12 +1,25 @@
-A WordBrain solver.
+# A WordBrain Solver.
 
-Usage: 
+## Building
 
-bin/main --input=RNSOETRTBMIVTWIA --lengths="5 3 2 6" --dict=/usr/share/dict/words
+Requires [bazel](http://bazel.io).
 
-TODO:
+```
+bazel build wordbrain
+bazel test wordbrain:all
+```
+
+## Usage
+
+```
+bazel-bin/wordbrain/wordbrain --input=RNSOETRTBMIVTWIA \
+	--lengths="6 2 3 5" \
+	--dict=/usr/share/dict/words \ 
+	--blacklist="av mb va rn"
+```
+
+## TODO
+
 - Split dictionary trie by length for efficiency.
-- Reverse length argument.
-- Uppercase blacklist.
 - Read blacklist from file.
-- Don't always abort when a solution is found.
+- Allow finding all solutions instead of stopping at first.
